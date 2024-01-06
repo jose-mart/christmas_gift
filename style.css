@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(#241c48, #1c1933 40%, #171426); /* Purple night sky gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% of viewport height */
+    margin: 0;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* Text color in the body */
+  }
+  
+  .starry-sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    background: #fff; /* White color for stars */
+    width: 2px;
+    height: 2px;
+  }
+  
+  .shooting-star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .shooting-star {
+    position: absolute;
+    background: #fff; /* White color for shooting star */
+    width: 2px;
+    height: 2px;
+    animation: shooting-star-fall 3s ease-in-out;
+  }
+  
+  .snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .snowflake {
+    position: absolute;
+    background: #fff; /* White color for snowflakes */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 10s linear infinite;
+  }
+  
+  .container {
+    background-color: rgba(147, 112, 219, 0.8); /* Purple game container background color with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Box shadow for the game container */
+  }
+  
+  .btn-primary {
+    background-color: #8a63bf; /* Purple color for primary buttons */
+    border-color: #8a63bf;
+  }
+  
+  .btn-warning {
+    background-color: #d88257; /* Orange color for warning/hint buttons */
+    border-color: #d88257;
+    color: #fff;
+  }
+  
+  .form-control {
+    background-color: #fff; /* White background for input fields */
+    color: #000; /* Black text color for input fields */
+  }
+  
+  #guess-result {
+    color: #d88257; /* Orange color for result messages */
+  }
+  
+  #hint-container span {
+    color: #b38abf; /* Light purple color for hint text */
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  
+  @keyframes shooting-star-fall {
+    0% {
+      transform: translate(-20vw, -20vh);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(120vw, 80vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(200vw, 200vh);
+      opacity: 0;
+    }
+  }
+  
